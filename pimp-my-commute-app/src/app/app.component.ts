@@ -36,9 +36,9 @@ export class MyApp {
     this.initializeApp();
 
     this.appMenuItems = [
-      {title: 'Home', component: HomePage, icon: 'home'},
-      {title: 'My Miles and Routes', component: LocalWeatherPage, icon: 'ios-navigate'},
-      {title: 'The Game', component: DogeGamePage, icon: 'ios-game-controller-a'}
+      {title: 'My commute', component: HomePage, icon: 'md-map'},
+      {title: 'My miles and routes', component: LocalWeatherPage, icon: 'ios-navigate'},
+      {title: 'The game', component: DogeGamePage, icon: 'ios-game-controller-a'}
     ];
   }
 
