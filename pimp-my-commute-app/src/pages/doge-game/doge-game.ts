@@ -221,6 +221,8 @@ export class DogeGamePage {
             }
         }
         function gameOver(){
+            var _doge_win = document.getElementById('doge-win');
+            _doge_win.hidden = false;
             document.onmousedown = null;
             document.onmousemove = null;
             document.onmouseup = null;
