@@ -7,8 +7,9 @@ page-trips,
     overflow: hidden;
 
     .background {
-      background-size: 100% auto;
+      //background-size: 100% auto;
       background-position: center;
+      background-repeat: no-repeat;
 
       .background-filter {
         height: 16rem;

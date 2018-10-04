@@ -16,21 +16,32 @@ import {SearchLocationPage} from "../search-location/search-location";
 export class HomePage {
   // search condition
   public search = {
-    name: "Rio de Janeiro, Brazil",
+    dropOff: "Frankfurt Flughafen (FRA)",
+    pickup: "Vallendar",
     date: new Date().toISOString()
-  }
+  };
 
   constructor(private storage: Storage, public nav: NavController, public popoverCtrl: PopoverController) {
   }
 
   ionViewWillEnter() {
-    // this.search.pickup = "Rio de Janeiro, Brazil";
-    // this.search.dropOff = "Same as pickup";
+    this.search.dropOff = "Frankfurt Flughafen (FRA)";
+    this.search.pickup = "Vallendar Bahnhof";
     this.storage.get('pickup').then((val) => {
       if (val === null) {
-        this.search.name = "Rio de Janeiro, Brazil"
+        this.search.pickup = "Vallendar Bahnhof";
       } else {
-        this.search.name = val;
+        // this.search.pickup = val;
+      }
+    }).catch((err) => {
+      console.log(err)
+    });
+
+    this.storage.get('dropoff').then((val) => {
+      if (val === null) {
+        this.search.dropOff = "Frankfurt Flughafen (FRA)";
+      } else {
+        // this.search.pickup = val;
       }
     }).catch((err) => {
       console.log(err)

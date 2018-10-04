@@ -2,7 +2,7 @@
 <ion-header>
 
   <ion-navbar color="primary">
-    <ion-title>Activity Checkout</ion-title>
+    <ion-title>Checkout</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -33,7 +33,7 @@
         </ion-col>
         <ion-col col-4>
           <span ion-text>Total with Tax</span>
-          <h5 ion-text color="primary" class="bold" no-margin>{{ trip.price_adult * adults | currency:'USD':true }}</h5>
+          <h5 ion-text color="primary" class="bold" no-margin>{{ trip.price_adult * adults | currency:'EUR':true }}</h5>
         </ion-col>
       </ion-row>
     </ion-grid>
