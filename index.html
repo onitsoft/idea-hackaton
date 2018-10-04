@@ -47,6 +47,7 @@
             _stage.drawImage(_img, 0, 0, _puzzleWidth, _puzzleHeight, 0, 0, _puzzleWidth, _puzzleHeight);
             createTitle("Click to Start Puzzle");
             buildPieces();
+            shufflePuzzle();
         }
         function createTitle(msg){
             _stage.fillStyle = "#000000";
