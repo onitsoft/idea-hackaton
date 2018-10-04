@@ -31,7 +31,7 @@ export class HomePage {
       if (val === null) {
         this.search.pickup = "Vallendar Bahnhof";
       } else {
-        // this.search.pickup = val;
+        this.search.pickup = val;
       }
     }).catch((err) => {
       console.log(err)
@@ -41,7 +41,7 @@ export class HomePage {
       if (val === null) {
         this.search.dropOff = "Frankfurt Flughafen (FRA)";
       } else {
-        // this.search.pickup = val;
+        this.search.dropOff = val;
       }
     }).catch((err) => {
       console.log(err)
