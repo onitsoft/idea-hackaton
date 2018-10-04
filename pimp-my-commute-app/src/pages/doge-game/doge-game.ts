@@ -224,7 +224,7 @@ export class DogeGamePage {
             document.onmousedown = null;
             document.onmousemove = null;
             document.onmouseup = null;
-            initPuzzle();
+            //initPuzzle();
         }
         function shuffleArray(a) {
             var j, x, i;
