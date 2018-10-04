@@ -407,6 +407,11 @@ ion-navbar.no-border {
   margin-top: 3px;
 }
 
+.settings-options {
+  position: absolute;
+  bottom: 1px;
+}
+
 .user-profile {
   .user-avatar {
     width: 68px;
@@ -430,10 +435,6 @@ ion-navbar.no-border {
     
   .toolbar-background {
     background-image: linear-gradient(135deg, color($colors, dark), color($colors, primary));
-  }
-    
-  .settings-options {
-    bottom: 1px;
   }
 
   .other-data {
