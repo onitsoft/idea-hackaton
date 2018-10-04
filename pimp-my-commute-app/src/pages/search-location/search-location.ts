@@ -20,29 +20,29 @@ export class SearchLocationPage {
       },
       {
         id: 2,
-        name: "Rio de Janeiro, Brazil"
+        name: "Vallendar Bahnhof"
       },
       {
         id: 3,
-        name: "São Paulo, Brazil"
+        name: "Koblenz Hbf"
       },
       {
         id: 4,
-        name: "New York, United States"
+        name: "Köln Flughafen (CGN)"
       },
       {
         id: 5,
-        name: "London, United Kingdom"
+        name: "Köln Hbf"
       },
       {
         id: 6,
-        name: "Same as pickup"
+        name: "Frankfurt Hbf"
       }
     ],
     recent: [
       {
         id: 1,
-        name: "Rio de Janeiro"
+        name: "Frankfurt Flughafen (FRA)"
       }
     ]
   };
