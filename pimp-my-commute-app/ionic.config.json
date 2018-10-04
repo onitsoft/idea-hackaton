@@ -1,0 +1,8 @@
+{
+  "name": "PIMP My Commute",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular",
+  "pro_id": "a93c3345"
+}
