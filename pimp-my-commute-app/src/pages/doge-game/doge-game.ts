@@ -151,7 +151,7 @@ export class DogeGamePage {
                 _stage.drawImage(_img, _currentPiece.sx, _currentPiece.sy, _pieceWidth, _pieceHeight, _mouse.x - (_pieceWidth / 2), _mouse.y - (_pieceHeight / 2), _pieceWidth, _pieceHeight);
                 _stage.restore();
                 document.ontouchmove = updatePuzzle;
-                document.ontouchsend = pieceDropped;
+                document.ontouchend = pieceDropped;
             }
         }
         function checkPieceClicked(){
