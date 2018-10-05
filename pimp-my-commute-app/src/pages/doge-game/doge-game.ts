@@ -210,7 +210,7 @@ export class DogeGamePage {
         }
         function pieceDropped(e){
             document.onpointermove = null;
-            document.onpointerup = null;
+            document.ontouchend = null;
             if(_currentDropPiece != null){
                 var tmp = {xPos:_currentPiece.xPos,yPos:_currentPiece.yPos};
                 _currentPiece.xPos = _currentDropPiece.xPos;
@@ -240,9 +240,9 @@ export class DogeGamePage {
         function gameOver(){
             var _doge_win = document.getElementById('doge-win');
             _doge_win.hidden = false;
-            document.onpointerdown = null;
+            document.ontouchstart = null;
             document.onpointermove = null;
-            document.onpointerup = null;
+            document.ontouchend = null;
             //initPuzzle();
         }
         function shuffleArray(a) {
