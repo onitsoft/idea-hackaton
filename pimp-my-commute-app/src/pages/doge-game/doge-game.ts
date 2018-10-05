@@ -111,7 +111,7 @@ export class DogeGamePage {
                     yPos += _pieceHeight;
                 }
             }
-            document.onpointerdown = shufflePuzzle;
+            document.ontouchstart = shufflePuzzle;
         }
         function shufflePuzzle(){
             _pieces = shuffleArray(_pieces);
@@ -132,7 +132,7 @@ export class DogeGamePage {
                     yPos += _pieceHeight;
                 }
             }
-            document.onpointerdown = onPuzzleClick;
+            document.ontouchstart = onPuzzleClick;
         }
         function onPuzzleClick(e){
             if(e.layerX || e.layerX == 0){
@@ -150,8 +150,8 @@ export class DogeGamePage {
                 _stage.globalAlpha = .9;
                 _stage.drawImage(_img, _currentPiece.sx, _currentPiece.sy, _pieceWidth, _pieceHeight, _mouse.x - (_pieceWidth / 2), _mouse.y - (_pieceHeight / 2), _pieceWidth, _pieceHeight);
                 _stage.restore();
-                document.onpointermove = updatePuzzle;
-                document.onpointerup = pieceDropped;
+                document.ontouchmove = updatePuzzle;
+                document.ontouchsend = pieceDropped;
             }
         }
         function checkPieceClicked(){
@@ -209,7 +209,7 @@ export class DogeGamePage {
             _stage.strokeRect( _mouse.x - (_pieceWidth / 2), _mouse.y - (_pieceHeight / 2), _pieceWidth,_pieceHeight);
         }
         function pieceDropped(e){
-            document.onpointermove = null;
+            document.ontouchmove = null;
             document.ontouchend = null;
             if(_currentDropPiece != null){
                 var tmp = {xPos:_currentPiece.xPos,yPos:_currentPiece.yPos};
@@ -241,7 +241,7 @@ export class DogeGamePage {
             var _doge_win = document.getElementById('doge-win');
             _doge_win.hidden = false;
             document.ontouchstart = null;
-            document.onpointermove = null;
+            document.ontouchmove = null;
             document.ontouchend = null;
             //initPuzzle();
         }
