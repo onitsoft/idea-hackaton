@@ -25,6 +25,7 @@ import {TripDetailPage} from "../pages/trip-detail/trip-detail";
 import {TripsPage} from "../pages/trips/trips";
 import {LocalWeatherPage} from "../pages/local-weather/local-weather";
 import {DogeGamePage} from "../pages/doge-game/doge-game";
+import {TicketPage} from "../pages/ticket/ticket";
 
 // import services
 // end import services
@@ -46,7 +47,8 @@ import {DogeGamePage} from "../pages/doge-game/doge-game";
     SearchLocationPage,
     TripDetailPage,
     TripsPage,
-    DogeGamePage
+    DogeGamePage,
+    TicketPage
   ],
   imports: [
     BrowserModule,
@@ -74,7 +76,8 @@ import {DogeGamePage} from "../pages/doge-game/doge-game";
     SearchLocationPage,
     TripDetailPage,
     TripsPage,
-    DogeGamePage
+    DogeGamePage,
+    TicketPage
   ],
   providers: [
     StatusBar,

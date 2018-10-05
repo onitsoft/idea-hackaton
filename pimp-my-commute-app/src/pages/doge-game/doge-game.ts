@@ -39,9 +39,10 @@ export class DogeGamePage {
         var _starbucks = 1;
         var _macdac = 2;
         var _kfc = 3;
+        var _redhorse = 4;
 
         function initGame(){
-            var _logo = Math.floor(Math.random() * Math.floor(_kfc));
+            var _logo = Math.floor(Math.random() * Math.floor(_redhorse + 1));
             _img = new Image();
             _img.addEventListener('load',onImage,false);
             if (_logo == _starbucks) {
@@ -53,6 +54,8 @@ export class DogeGamePage {
                 _img.src = "../assets/img/macdac.png";
             } else if (_logo == _kfc) {
                 _img.src = "../assets/img/kfc.png";
+            } else if (_logo == _redhorse) {
+                _img.src = "../assets/img/redhorse.png";
             }
         }
         function onImage(e){
