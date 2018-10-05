@@ -16,6 +16,37 @@
 
 <ion-content padding>
 
+
+  <div class="trip-info card round">
+    <div class="trip-image border-bottom" [ngStyle]="{'background-image': 'url(' + trip.thumb + ')'}"></div>
+    <ion-grid padding>
+      <ion-row>
+        <ion-col width-66>
+          <h5 ion-text color="primary">{{ trip.name }}</h5>
+          <div>
+            <span class="bold">{{ trip.sub_name }}</span>
+            <br/>
+            <span ion-text color="dark">{{ adults }} Adults</span>
+          </div>
+          <div margin-top>
+            <span ion-text color="dark">{{ date | date: 'EEE, MMM dd' }}</span>
+            <br/>
+            <span ion-text>{{ trip.location }}</span>
+          </div>
+          <div margin-top>
+            <ion-icon name="checkmark" class="text-green" *ngIf="trip.free_cancellation"></ion-icon>
+            <span ion-text *ngIf="trip.free_cancellation">Free cancellation</span>
+          </div>
+        </ion-col>
+        <ion-col col-4>
+          <span ion-text>Total with Tax</span>
+          <h5 ion-text color="primary" class="bold" no-margin>{{ trip.price_adult * adults | currency:'EUR':true }}</h5>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+
   <ion-grid>
      <ion-img width="328" height="328" src="../assets/img/qr_code.jpg"></ion-img>
   </ion-grid>
