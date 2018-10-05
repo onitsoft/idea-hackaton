@@ -80,6 +80,17 @@
             <ion-icon name="add-circle" class="text-2x" tappable (click)="plusChildren()" color="secondary"></ion-icon>
           </ion-col>
         </ion-row>
+      <ion-row margin-top style="color: grey;">
+          <ion-col width-70>
+            <span ion-text><strong>-{{ trip.discount | currency:'EUR':true }} (Coupoun)</strong> by {{ trip.discount_vendor }}</span>
+          </ion-col>
+          <ion-col width-10 text-center>
+          </ion-col>
+          <ion-col width-10 text-center>1</ion-col>
+          <ion-col width-10 text-center>
+          </ion-col>
+        </ion-row>
+
       </ion-grid>
     </div>
     <div padding class="form-bottom">

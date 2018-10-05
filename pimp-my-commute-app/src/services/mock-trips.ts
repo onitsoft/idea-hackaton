@@ -20,7 +20,7 @@ export let TRIPS = [
       // "assets/img/trip/thumb/trip_8.jpg",
     ],
     highlights: [
-      "Free Wifi",
+      "Free WLAN",
       "220v electricity socket",
       "Toilet",
       "Restaurant wagon",

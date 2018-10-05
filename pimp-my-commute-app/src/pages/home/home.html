@@ -20,7 +20,7 @@
 
 <ion-content padding class="animated fadeIn common-bg">
 
-  <ion-card no-margin margin-bottom class="full-width">
+    <ion-card no-margin margin-bottom class="full-width">
     <ion-item tappable (click)="choosePlace('from')" class="border-bottom">
       <ion-icon name="search" color="primary" item-left></ion-icon>
       <span>{{ search.pickup }}</span>
@@ -33,7 +33,20 @@
       <ion-icon name="md-calendar" color="primary" item-left></ion-icon>
       <ion-datetime class="no-pl" displayFormat="DD/MM/YYYY" pickerFormat="DD/MM/YYYY" [(ngModel)]="search.date"></ion-datetime>
     </ion-item>
-  </ion-card>
+    <ion-item>
+      <ion-label class="label label-md">
+          <span>
+            Filters
+          </span>
+      </ion-label>
+        <ion-select [(ngModel)]="search.filters" multiple="true">
+            <ion-option>WLAN</ion-option>
+            <ion-option>Quite wagon</ion-option>
+            <ion-option>Restaurant wagon</ion-option>
+            <ion-option>Toilets</ion-option>
+        </ion-select>
+        </ion-item>
+    </ion-card>
 
   <button ion-button icon-start block no-margin color="primary" class="round" tappable (click)="doSearch()">
     <ion-icon name="search"></ion-icon> Search

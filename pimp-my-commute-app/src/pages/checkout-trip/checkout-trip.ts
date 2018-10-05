@@ -34,7 +34,7 @@ export class CheckoutTripPage {
     let toast = this.toastCtrl.create({
       showCloseButton: true,
       cssClass: 'profile-bg',
-      message: 'Book Activity Success!',
+      message: 'Your commute was booked successfully!',
       duration: 3000,
       position: 'bottom'
     });
