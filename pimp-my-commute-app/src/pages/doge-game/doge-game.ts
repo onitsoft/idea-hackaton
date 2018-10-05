@@ -111,7 +111,7 @@ export class DogeGamePage {
                     yPos += _pieceHeight;
                 }
             }
-            document.onmousedown = shufflePuzzle;
+            document.ontouchstart = shufflePuzzle;
         }
         function shufflePuzzle(){
             _pieces = shuffleArray(_pieces);
@@ -132,7 +132,7 @@ export class DogeGamePage {
                     yPos += _pieceHeight;
                 }
             }
-            document.onmousedown = onPuzzleClick;
+            document.ontouchstart = onPuzzleClick;
         }
         function onPuzzleClick(e){
             if(e.layerX || e.layerX == 0){
@@ -150,8 +150,8 @@ export class DogeGamePage {
                 _stage.globalAlpha = .9;
                 _stage.drawImage(_img, _currentPiece.sx, _currentPiece.sy, _pieceWidth, _pieceHeight, _mouse.x - (_pieceWidth / 2), _mouse.y - (_pieceHeight / 2), _pieceWidth, _pieceHeight);
                 _stage.restore();
-                document.onmousemove = updatePuzzle;
-                document.onmouseup = pieceDropped;
+                document.ontouchmove = updatePuzzle;
+                document.ontouchend = pieceDropped;
             }
         }
         function checkPieceClicked(){
@@ -209,8 +209,8 @@ export class DogeGamePage {
             _stage.strokeRect( _mouse.x - (_pieceWidth / 2), _mouse.y - (_pieceHeight / 2), _pieceWidth,_pieceHeight);
         }
         function pieceDropped(e){
-            document.onmousemove = null;
-            document.onmouseup = null;
+            document.ontouchmove = null;
+            document.ontouchend = null;
             if(_currentDropPiece != null){
                 var tmp = {xPos:_currentPiece.xPos,yPos:_currentPiece.yPos};
                 _currentPiece.xPos = _currentDropPiece.xPos;
@@ -240,9 +240,9 @@ export class DogeGamePage {
         function gameOver(){
             var _doge_win = document.getElementById('doge-win');
             _doge_win.hidden = false;
-            document.onmousedown = null;
-            document.onmousemove = null;
-            document.onmouseup = null;
+            document.ontouchstart = null;
+            document.ontouchmove = null;
+            document.ontouchend = null;
             //initPuzzle();
         }
         function shuffleArray(a) {
