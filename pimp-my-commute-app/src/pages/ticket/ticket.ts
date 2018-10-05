@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import {DogeGamePage} from "../doge-game/doge-game";
+import {HomePage} from "../home/home";
 
 /**
  * Generated class for the TicketPage page.
@@ -21,7 +22,10 @@ export class TicketPage {
 
   GoToGame(){
     this.navController.setRoot(DogeGamePage);
-}
+  }
+  GoHome(){
+    this.navController.setRoot(HomePage);
+  }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad TicketPage');
