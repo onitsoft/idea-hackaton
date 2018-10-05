@@ -8,7 +8,8 @@ import { Keyboard } from '@ionic-native/keyboard';
 import { HomePage } from "../pages/home/home";
 import { LoginPage } from "../pages/login/login";
 import { LocalWeatherPage } from "../pages/local-weather/local-weather";
-import {DogeGamePage} from "../pages/doge-game/doge-game";
+import { DogeGamePage } from "../pages/doge-game/doge-game";
+import { DiscountsPage } from "../pages/discounts/discounts";
 
 export interface MenuItem {
     title: string;
@@ -37,8 +38,9 @@ export class MyApp {
 
     this.appMenuItems = [
       {title: 'My commute', component: HomePage, icon: 'md-map'},
-      {title: 'My miles and routes', component: LocalWeatherPage, icon: 'ios-navigate'},
-      {title: 'The game', component: DogeGamePage, icon: 'ios-game-controller-a'}
+      {title: 'My miles and routes', component: LocalWeatherPage, icon: 'navigate'},
+      {title: 'PIMPed discounts', component: DiscountsPage, icon: 'pricetags'},
+      {title: 'The game', component: DogeGamePage, icon: 'game-controller-a'}
     ];
   }
 
