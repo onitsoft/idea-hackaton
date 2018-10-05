@@ -34,8 +34,8 @@ export class CheckoutTripPage {
     let toast = this.toastCtrl.create({
       showCloseButton: true,
       cssClass: 'profile-bg',
-      message: 'Your commute was booked successfully!',
-      duration: 3000,
+      message: 'Book Activity Success!',
+      duration: 30,
       position: 'bottom'
     });
 
@@ -46,6 +46,6 @@ export class CheckoutTripPage {
       toast.present();
       // back to home page
       this.nav.setRoot(TicketPage);
-    }, 3000)
+    }, 1000)
   }
 }
